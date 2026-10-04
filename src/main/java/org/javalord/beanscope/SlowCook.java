@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Primary
-@Scope(value = "prototype", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class SlowCook implements Cook {
     @Override
     public void cook() {
