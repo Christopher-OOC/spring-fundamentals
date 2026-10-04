@@ -13,7 +13,13 @@ public class RestaurantService implements IRestaurantService {
     public RestaurantService() {
     }
 
+    @Critical(maxTime = 1000)
     public void makeOrder(String order) {
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println("Got order " + order);
 
         slowCook.cook();

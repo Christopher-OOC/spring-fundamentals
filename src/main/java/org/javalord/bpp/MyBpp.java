@@ -19,7 +19,7 @@ public class MyBpp implements BeanPostProcessor {
             return bean;
         }
 
-        boolean isDyProxy = false;
+        boolean isDyProxy = true;
         Object proxyInstance = null;
 
         if (isDyProxy) {
