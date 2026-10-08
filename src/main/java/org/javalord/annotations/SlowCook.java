@@ -5,10 +5,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Primary
-public class SlowCook {
+public class SlowCook implements Cook {
 
     public void cook() {
         System.out.println("slow cooking...");
     }
-
 }
